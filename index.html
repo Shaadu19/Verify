@@ -97,7 +97,7 @@
 <body>
 
 <div class="card">
-    <div class="title" id="title">EXIT PERMIT Verification</div>
+    <div class="title">EXIT PERMIT Verification</div>
 
     <div class="status-box">
         <div class="check-icon">✓</div>
@@ -110,7 +110,7 @@
     <table>
         <tr>
             <td>Permit ID</td>
-            <td id="permitId">-</td>
+            <td>2633</td>
         </tr>
         <tr>
             <td>Vessel</td>
@@ -134,27 +134,6 @@
         </tr>
     </table>
 </div>
-
-<script>
-    // Get URL path
-    // Example: /verify/22022/EXIT_PERMIT
-
-    const path = window.location.pathname.split("/");
-
-    const verifyIndex = path.indexOf("verify");
-
-    if (verifyIndex !== -1) {
-        const permitNumber = path[verifyIndex + 1];
-        const permitType = path[verifyIndex + 2];
-
-        // Update UI dynamically
-        document.getElementById("permitId").innerText = permitNumber;
-        document.getElementById("title").innerText = permitType + " Verification";
-
-        // Optional: change status based on data
-        console.log("Permit:", permitNumber, permitType);
-    }
-</script>
 
 </body>
 </html>
